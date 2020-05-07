@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.6.0</Version>
+    <SymbolConfigObject version="3.5.6.0" />
+    <ProjectInfo name="code-dry-martini" devicename="Device" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeUserDef name="T_SFCStepType" size="16" nativesize="16" typeclass="Userdef" pouclass="STRUCTURE" iecname="SFCStepType">
+      <UserDefElement iecname="_t" type="T_TIME" byteoffset="12" vartype="VAR" />
+    </TypeUserDef>
+    <TypeSimple name="T_TIME" size="4" swapsize="4" typeclass="Time" iecname="TIME" />
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="Envase">
+        <Node name="Step2" type="T_SFCStepType" access="ReadWrite">
+          <Attribute>hide:=</Attribute>
+          <Attribute>Name:=Step2</Attribute>
+        </Node>
+      </Node>
+      <Node name="Globals">
+        <Node name="ALARM3" type="T_BOOL" access="ReadWrite" />
+        <Node name="Alert_TR01Empty" type="T_BOOL" access="ReadWrite" />
+        <Node name="Auto" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA101" type="T_BOOL" access="ReadWrite" />
+        <Node name="CapacidadeJA01" type="T_REAL" access="ReadWrite" />
+        <Node name="Emg" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV101" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV102" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV103" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV104" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV105" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV106" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV107" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV201" type="T_BOOL" access="ReadWrite" />
+        <Node name="FQ101" type="T_REAL" access="ReadWrite" />
+        <Node name="FQ102" type="T_REAL" access="ReadWrite" />
+        <Node name="FQ103" type="T_REAL" access="ReadWrite" />
+        <Node name="FQ201" type="T_REAL" access="ReadWrite" />
+        <Node name="FV201" type="T_BOOL" access="ReadWrite" />
+        <Node name="JA01" type="T_REAL" access="ReadWrite" />
+        <Node name="LIGA_MOTOR" type="T_BOOL" access="ReadWrite" />
+        <Node name="LigaAux" type="T_BOOL" access="ReadWrite" />
+        <Node name="LSH101" type="T_BOOL" access="ReadWrite" />
+        <Node name="LSH102" type="T_BOOL" access="ReadWrite" />
+        <Node name="LSH201" type="T_BOOL" access="ReadWrite" />
+        <Node name="LSHH201" type="T_BOOL" access="ReadWrite" />
+        <Node name="LSL101" type="T_BOOL" access="ReadWrite" />
+        <Node name="LSL102" type="T_BOOL" access="ReadWrite" />
+        <Node name="LSL201" type="T_BOOL" access="ReadWrite" />
+        <Node name="M101" type="T_BOOL" access="ReadWrite" />
+        <Node name="M201" type="T_BOOL" access="ReadWrite" />
+        <Node name="nBarril" type="T_INT" access="ReadWrite" />
+        <Node name="RM01" type="T_REAL" access="ReadWrite" />
+        <Node name="TempAmbienteCelsius" type="T_REAL" access="ReadWrite" />
+        <Node name="TempRM01" type="T_REAL" access="ReadWrite" />
+        <Node name="TP01" type="T_REAL" access="ReadWrite" />
+        <Node name="TSL101" type="T_BOOL" access="ReadWrite" />
+        <Node name="tZY201" type="T_REAL" access="ReadWrite" />
+        <Node name="tZY202" type="T_REAL" access="ReadWrite" />
+        <Node name="ZY201" type="T_BOOL" access="ReadWrite" />
+        <Node name="ZY202" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="PLC_PRG">
+        <Node name="Liga" type="T_BOOL" access="Write" />
+        <Node name="Man" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="pwmpou">
+        <Node name="motor_porcento_PWM" type="T_INT" access="ReadWrite" />
+      </Node>
+      <Node name="SimulaContadores">
+        <Node name="CapacidadeJaquetaRM01Litros" type="T_INT" access="ReadWrite" />
+        <Node name="TempAmbienteCulsius" type="T_INT" access="ReadWrite" />
+        <Node name="TOTALDRY" type="T_REAL" access="ReadWrite" />
+        <Node name="TOTALGIN" type="T_REAL" access="ReadWrite" />
+        <Node name="TOTALVER" type="T_REAL" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
